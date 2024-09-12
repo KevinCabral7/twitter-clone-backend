@@ -6,11 +6,9 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data/
     environment:
-      - POSTGRES_USER=bookstore_dev
-      - POSTGRES_PASSWORD=bookstore_dev
-      - POSTGRES_DB=bookstore_dev_db
-    networks:
-      - live-network
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=XgzUafoQlfgKLMHEUyBPvVxaJwWNaHNi
+      - POSTGRES_DB=railway
 
   backend:
     build: .
@@ -23,21 +21,6 @@ services:
       - ./.env
     depends_on:
       - db
-    networks:
-      - live-network
-
-  frontend:
-    build: .
-    ports:
-      - 5173:5173
-    depends_on:
-      - db
-    networks:
-      - live-network
 
 volumes:
   postgres_data:
-
-networks:
-  live-network:
-    driver: bridge
