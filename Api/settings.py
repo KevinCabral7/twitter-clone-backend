@@ -88,7 +88,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': os.getenv("PGDATABASE"),
-        'USER': os.getenv("PGUSER"),
+        'USER': os.getenv("POSTGRES_USER"),
         'PASSWORD': os.getenv("PGPASSWORD"),
         'HOST': os.getenv("PGHOST"),
         'PORT': os.getenv("PGPORT"),
@@ -145,6 +145,7 @@ SIMPLE_JWT = {
 }
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:3030',
+    'http://localhost:3000',
     'https://twitter-clone-frontend-production-99d1.up.railway.app'
 ]
 CORS_ALLOW_CREDENTIALS = True
