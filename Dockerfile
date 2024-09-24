@@ -36,6 +36,8 @@ COPY . /app/
 
 RUN pip install -r requirements.txt
 
+ENV DJANGO_SETTINGS_MODULE=Api.settings
+
 EXPOSE 8000
 
 CMD ["sh", "entrypoint.sh"]
