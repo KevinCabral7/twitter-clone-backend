@@ -3,7 +3,6 @@ from channels.generic.websocket import AsyncConsumer
 import jwt
 from Api import settings
 from twitter.serializers import UserSerializer
-from twitter.views import User
 from django.contrib.auth.models import AnonymousUser
 from .serializers import UserSerializer, PostSerializer
 from channels.db import database_sync_to_async
