@@ -140,7 +140,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CSRF_TRUSTED_ORIGINS = ['https://twitter-clone-frontend-production-99d1.up.railway.app', "http://localhost:3000"]
 
 SIMPLE_JWT = {
-    "ACESS_TOKEN_LIFETIME":  timedelta(minutes=30),
+    "ACCESS_TOKEN_LIFETIME":  timedelta(minutes=30),
     'REFRESH_TOKEN_LIFETIME': timedelta(days=1)
 }
 CORS_ALLOWED_ORIGINS = [

@@ -26,7 +26,7 @@ urlpatterns = [
     path('accounts/', include('django.contrib.auth.urls')),
     path("api/user/register/", views.CreateUserView.as_view(), name='register'),
     path('api/token/', TokenObtainPairView.as_view(), name='get_token'),
-    path("api/token/refresh/", TokenRefreshView.as_view(), name="refresh"),
+    path("api/token/refresh/", TokenRefreshView.as_view(), name="token_refresh"),
     path('api-auth/', include("rest_framework.urls")),
     path('api/', include('twitter.urls')),
 ]
