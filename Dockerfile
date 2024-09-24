@@ -23,7 +23,7 @@ RUN apt-get update \
 
 # install postgres dependencies inside of Docker
 RUN apt-get update \
-    && apt-get -y install libpq-dev gcc python3-dev \
+    && apt-get -y install libpq-dev gcc \
     && pip install psycopg2 
 
 # copy project requirement files here to ensure they will be cached.
