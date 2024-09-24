@@ -1,3 +1,5 @@
+export DJANGO_SETTINGS_MODULE=Api.settings
+
 echo 'Applying migrations...'
 python manage.py migrate
 
