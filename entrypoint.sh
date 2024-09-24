@@ -2,4 +2,4 @@ echo 'Applying migrations...'
 python manage.py migrate
 
 echo 'Running server...'
-daphne -b 0.0.0.0 -p $PORT Api.asgi:application
+gunicorn Api.asgi:application --bind 0.0.0.0:$PORT
