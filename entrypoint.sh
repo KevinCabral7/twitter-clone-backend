@@ -4,4 +4,4 @@ echo 'Applying migrations...'
 python manage.py migrate
 
 echo 'Running server...'
-gunicorn -b 0.0.0.0 -p $PORT Api.asgi:application
+uvicorn Api.asgi:application -b 0.0.0.0 -p $PORT
