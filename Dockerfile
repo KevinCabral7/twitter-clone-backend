@@ -19,7 +19,7 @@ RUN apt-get update \
         curl \
         # deps for building python deps 
         build-essential/
-        apt-get install libpq-dev python3-dev
+        apt-get install libpq-dev python3-dev/
 
 
 # install postgres dependencies inside of Docker
