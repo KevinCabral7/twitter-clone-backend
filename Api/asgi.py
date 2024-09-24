@@ -18,9 +18,11 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Api.settings')
 
 os.environ["DJANGO_ALLOW_ASYNC_UNSAFE"] = "true"
 
+django_asgi_app = get_asgi_application()
+
 application = ProtocolTypeRouter(
     {
-        'http': get_asgi_application(),
+        'https': django_asgi_app,
         'websocket': AllowedHostsOriginValidator(
             AuthMiddlewareStack(URLRouter(twitter.routing.websocket_urlpatterns))
         ),
