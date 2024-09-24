@@ -17,8 +17,9 @@ ENV PYTHONUNBUFFERED=1 \
 RUN apt-get update \
     && apt-get install --no-install-recommends -y \
         curl \
-        # deps for building python deps
-        build-essential
+        # deps for building python deps 
+        build-essential/
+        apt-get install libpq-dev python3-dev
 
 
 # install postgres dependencies inside of Docker
