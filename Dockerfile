@@ -15,16 +15,15 @@ ENV PYTHONUNBUFFERED=1 \
 
 
 RUN apt-get update \
-    && apt-get install libpq-dev python3-dev
     && apt-get install --no-install-recommends -y \
         curl \
-        # deps for building python deps 
-        build-essential/
+        # deps for building python deps
+        build-essential
 
 
 # install postgres dependencies inside of Docker
 RUN apt-get update \
-    && apt-get -y install libpq-dev gcc \
+    && apt-get -y install libpq-dev gcc python3-dev \
     && pip install psycopg2 
 
 # copy project requirement files here to ensure they will be cached.
