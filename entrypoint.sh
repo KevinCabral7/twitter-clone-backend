@@ -2,4 +2,4 @@ echo 'Applying migrations...'
 python manage.py migrate
 
 echo 'Running server...'
-uvicorn Api.asgi:application --host 0.0.0.0 --port $PORT
+daphne -b 0.0.0.0 -p $PORT Api.asgi:application
