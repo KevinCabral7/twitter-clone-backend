@@ -137,7 +137,7 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CSRF_TRUSTED_ORIGINS = ['https://twitter-clone-frontend-production-99d1.up.railway.app', "http://localhost:3000"]
+CSRF_TRUSTED_ORIGINS = ['https://twitter-clone-backend-jt57.onrender.com/', "http://localhost:3000"]
 
 SIMPLE_JWT = {
     "ACCESS_TOKEN_LIFETIME":  timedelta(minutes=30),
