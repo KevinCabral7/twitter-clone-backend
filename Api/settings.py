@@ -146,7 +146,7 @@ SIMPLE_JWT = {
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:3030',
     'http://localhost:3000',
-    'https://twitter-clone-frontend-production-99d1.up.railway.app',
+    'https://twitter-clone-backend-jt57.onrender.com/',
 ]
 CORS_ALLOW_CREDENTIALS = True
 
