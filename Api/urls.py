@@ -29,4 +29,5 @@ urlpatterns = [
     path("api/token/refresh/", TokenRefreshView.as_view(), name="token_refresh"),
     path('api-auth/', include("rest_framework.urls")),
     path('api/', include('twitter.urls')),
+    path("update_server/", views.update, name="update"),
 ]
