@@ -32,7 +32,7 @@ DEBUG = True
 
 # Application definition
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['kevincabral7.pythonanywhere.com']
 
 INSTALLED_APPS = [
     'twitter',
@@ -64,7 +64,7 @@ ROOT_URLCONF = 'Api.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'back-end', 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
