@@ -137,7 +137,7 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CSRF_TRUSTED_ORIGINS = ['https://twitter-clone-frontend-72xi.onrender.com', "http://localhost:3000"]
+CSRF_TRUSTED_ORIGINS = ['https://twitter-clone-frontend-sigma.vercel.app', "http://localhost:3000"]
 
 SIMPLE_JWT = {
     "ACCESS_TOKEN_LIFETIME":  timedelta(minutes=30),
@@ -146,7 +146,7 @@ SIMPLE_JWT = {
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:3030',
     'http://localhost:3000',
-    'https://twitter-clone-frontend-72xi.onrender.com',
+    'https://twitter-clone-frontend-sigma.vercel.app',
 ]
 CORS_ALLOW_CREDENTIALS = True
 
