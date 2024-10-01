@@ -32,7 +32,7 @@ DEBUG = True
 
 # Application definition
 
-ALLOWED_HOSTS = ['https://kevincabral7.pythonanywhere.com']
+ALLOWED_HOSTS = ['kevincabral7.pythonanywhere.com']
 
 INSTALLED_APPS = [
     'twitter',
