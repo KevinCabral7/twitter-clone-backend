@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 import os
 from pathlib import Path
 from datetime import timedelta
+import dj_database_url
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -32,7 +33,7 @@ DEBUG = True
 
 # Application definition
 
-ALLOWED_HOSTS = ['kevincabral7.pythonanywhere.com']
+ALLOWED_HOSTS = ['kevincabral7.pythonanywhere.com', '127.0.0.1']
 
 INSTALLED_APPS = [
     'twitter',
@@ -85,14 +86,10 @@ ASGI_APPLICATION = 'Api.asgi.application'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.getenv("PGDATABASE"),
-        'USER': os.getenv("POSTGRES_USER"),
-        'PASSWORD': os.getenv("PGPASSWORD"),
-        'HOST': os.getenv("PGHOST"),
-        'PORT': os.getenv("PGPORT"),
-    }
+    'default': dj_database_url.config(
+        default='postgresql://twitter_api_postgres_user:FSnMg6XmNY3vcowovo3SU6D6c1VioV8c@dpg-crq2dv0gph6c73a64c30-a.oregon-postgres.render.com/twitter_api_postgres',
+        conn_max_age=600
+    )
 }
 
 
