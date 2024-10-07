@@ -88,7 +88,8 @@ ASGI_APPLICATION = 'Api.asgi.application'
 DATABASES = {
     'default': dj_database_url.config(
         default='postgresql://twitter_api_postgres_user:FSnMg6XmNY3vcowovo3SU6D6c1VioV8c@dpg-crq2dv0gph6c73a64c30-a.oregon-postgres.render.com/twitter_api_postgres',
-        conn_max_age=600
+        conn_max_age=600,
+        ssl_require=True
     )
 }
 
