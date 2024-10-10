@@ -86,11 +86,14 @@ ASGI_APPLICATION = 'Api.asgi.application'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 DATABASES = {
-    'default': dj_database_url.config(
-        default='postgresql://twitter_api_postgres_user:FSnMg6XmNY3vcowovo3SU6D6c1VioV8c@dpg-crq2dv0gph6c73a64c30-a.oregon-postgres.render.com/twitter_api_postgres',
-        conn_max_age=600,
-        ssl_require=True
-    )
+    "default": {
+        "ENGINE": os.environ.get("SQL_ENGINE", "django.db.backends.sqlite3"),
+        "NAME": os.environ.get("SQL_DATABASE", BASE_DIR / "db.sqlite3"),
+        "USER": os.environ.get("SQL_USER", "user"),
+        "PASSWORD": os.environ.get("SQL_PASSWORD", "password"),
+        "HOST": os.environ.get("SQL_HOST", "localhost"),
+        "PORT": os.environ.get("SQL_PORT", "5432"),
+    }
 }
 
 

@@ -18,7 +18,7 @@ from django.contrib import admin
 from django.urls import path, include
 from rest_framework import routers
 from twitter import views
-from Api.views import update
+# from Api.views import update
 from django.views.decorators.csrf import csrf_exempt
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 
@@ -30,5 +30,5 @@ urlpatterns = [
     path("api/token/refresh/", TokenRefreshView.as_view(), name="token_refresh"),
     path('api-auth/', include("rest_framework.urls")),
     path('api/', include('twitter.urls')),
-    path("update_server/", update, name="update"),
+    # path("update_server/", update, name="update"),
 ]

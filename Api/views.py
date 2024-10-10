@@ -1,7 +1,8 @@
 from django.http import HttpResponse
 from django.template import loader
 from django.views.decorators.csrf import csrf_exempt
-
+import os
+os.environ["GIT_PYTHON_REFRESH"] = "quiet"
 import git
 
 
