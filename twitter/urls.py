@@ -1,4 +1,4 @@
-from django.urls import path, re_path
+from django.urls import path
 from . import views
 
 urlpatterns = [
@@ -8,7 +8,7 @@ urlpatterns = [
     path('user/likes/', views.PostLikeList.as_view(),name='likes-list'),
     path('user/update', views.UserProfileUpdate.as_view(), name='user-profile-update'),
     path(r'search', views.UserViewSet.as_view(), name="search"),
-    re_path(r'^user/(?P<identificator>[a-zA-Z0-9]+)/$', views.UserInfo.as_view(), name='user-info'),
+    path('user/<str:identificator>/', views.UserInfo.as_view(), name='user-info'),
     path('posts/', views.PostCreate.as_view(), name='posts'),
     path('post/create', views.PostCreate.as_view(), name='post-create'),
     path('post/view/<int:pk>/',views.PostInfo.as_view(), name='view-post'),
